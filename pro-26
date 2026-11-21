@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    FILE *fp;
+    char text[100];
+
+    fp = fopen("file.txt", "w");
+    printf("Enter text: ");
+    scanf("%s", text);
+
+    fprintf(fp, "%s", text);
+    fclose(fp);
+
+    fp = fopen("file.txt", "r");
+
+    fscanf(fp, "%s", text);
+    printf("File Content: %s\n", text);
+    fclose(fp);
+
+    fp = fopen("file.txt", "a");
+    fprintf(fp, " Welcome");
+    fclose(fp);
+
+    printf("File updated successfully");
+
+    return 0;
+}
