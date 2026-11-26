@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #define MAX_FRAMES 3
 void printFrames(int frames[], int n) {
